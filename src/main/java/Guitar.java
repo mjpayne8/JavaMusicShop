@@ -13,4 +13,12 @@ public class Guitar implements IPlay {
     public String getGuitarType() {
         return this.guitarType;
     }
+
+    public int getNumberOfSrings() {
+        return this.numberOfStrings;
+    }
+
+    public String play() {
+        return "Twang";
+    }
 }

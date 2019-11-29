@@ -17,4 +17,14 @@ public class GuitarTest {
         assertEquals("Bass", guitar.getGuitarType());
     }
 
+    @Test
+    public void hasNumberOfStrings(){
+        assertEquals(4, guitar.getNumberOfSrings());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("Twang", guitar.play());
+    }
+
 }
