@@ -9,7 +9,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano("Electronic");
+        piano = new Piano("Electronic", "Plastic", "Red");
     }
 
     @Test
@@ -20,6 +20,21 @@ public class PianoTest {
     @Test
     public void canPlay(){
         assertEquals("Twing", piano.play());
+    }
+
+    @Test
+    public void canGetConstruction(){
+        assertEquals("Plastic", piano.getConstruction());
+    }
+
+    @Test
+    public void canGetColour(){
+        assertEquals("Red", piano.getColour());
+    }
+
+    @Test
+    public void canGetType(){
+        assertEquals("Percussion", piano.getType());
     }
 
 }

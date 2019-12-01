@@ -1,10 +1,11 @@
 import Behaviour.IPlay;
 
-public class Trumpet implements IPlay {
+public class Trumpet extends Instrument implements IPlay {
 
     private int valves;
 
-    public Trumpet(int valves) {
+    public Trumpet(int valves, String colour) {
+        super("Metal", colour, "Brass");
         this.valves = valves;
     }
 

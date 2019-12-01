@@ -9,7 +9,7 @@ public class TrumpetTest {
 
     @Before
     public void before(){
-        trumpet = new Trumpet(3);
+        trumpet = new Trumpet(3, "Yellow");
     }
 
     @Test
@@ -21,5 +21,21 @@ public class TrumpetTest {
     public void canPlay(){
         assertEquals("Toot", trumpet.play());
     }
+
+    @Test
+    public void canGetConstruction(){
+        assertEquals("Metal", trumpet.getConstruction());
+    }
+
+    @Test
+    public void canGetColour(){
+        assertEquals("Yellow", trumpet.getColour());
+    }
+
+    @Test
+    public void canGetType(){
+        assertEquals("Brass", trumpet.getType());
+    }
+
 
 }
