@@ -1,12 +1,20 @@
 import Behaviour.IPlay;
+import Behaviour.ISell;
 
-public class Guitar extends Instrument implements IPlay {
+public class Guitar extends Instrument implements IPlay, ISell {
 
     private String guitarType;
     private int numberOfStrings;
 
-    public Guitar(String guitarType, int numberOfStrings, String construction, String colour) {
-        super(construction, colour, "String");
+    public Guitar(String guitarType,
+                  int numberOfStrings,
+                  String construction,
+                  String colour,
+                  String description,
+                  double boughtPrice,
+                  double sellPrice)
+    {
+        super(construction, colour, "String", description, boughtPrice, sellPrice);
         this.guitarType = guitarType;
         this.numberOfStrings = numberOfStrings;
     }
@@ -22,4 +30,5 @@ public class Guitar extends Instrument implements IPlay {
     public String play() {
         return "Twang";
     }
+
 }

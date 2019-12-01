@@ -9,7 +9,11 @@ public class TrumpetTest {
 
     @Before
     public void before(){
-        trumpet = new Trumpet(3, "Yellow");
+        trumpet = new Trumpet(3,
+                "Yellow",
+                "Trumpet",
+                30,
+                45);
     }
 
     @Test
@@ -35,6 +39,26 @@ public class TrumpetTest {
     @Test
     public void canGetType(){
         assertEquals("Brass", trumpet.getType());
+    }
+
+    @Test
+    public void canGetDescription(){
+        assertEquals("Trumpet", trumpet.getDescription());
+    }
+
+    @Test
+    public void canGetBoughtPrice(){
+        assertEquals(30, trumpet.getBoughtPrice(), 0.001);
+    }
+
+    @Test
+    public void canGetSellPrice(){
+        assertEquals(45, trumpet.getSellPrice(), 0.001);
+    }
+
+    @Test
+    public void canGetMarkup(){
+        assertEquals(0.5, trumpet.markUp(), 0.001);
     }
 
 
