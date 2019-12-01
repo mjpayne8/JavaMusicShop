@@ -1,6 +1,6 @@
 import Behaviour.ISell;
 
-public abstract class Item implements ISell {
+public class Item implements ISell {
     private String name;
     private String description;
     private double boughtPrice;
@@ -11,6 +11,10 @@ public abstract class Item implements ISell {
         this.description = description;
         this.boughtPrice = boughtPrice;
         this.sellPrice = sellPrice;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public double getBoughtPrice() {
